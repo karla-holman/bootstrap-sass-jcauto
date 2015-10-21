@@ -1,0 +1,81 @@
+//
+// Custom CSS
+// --------------------------------------------------
+
+
+// Header
+// --------------------------------------------------
+
+.header-img {
+  height: 600px;
+  width: 100%;
+
+  margin-top: -20px;
+
+  background-image: url("car.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+// Center sign image
+#header-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -100px;
+}
+
+#wings {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50px;
+}
+
+.affix #header-logo {
+  display: none;
+}
+
+#header-logo-affix {
+  display: none;
+}
+
+.affix #header-logo-affix {
+  display: inline;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0px;
+}
+
+#top-nav-bar {
+  margin: 0px;
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #EEEEEE;
+    background-image: url("Navbar.png");
+    background-repeat: repeat-x;
+    box-shadow: 10px 3px 5px;
+}
+
+#neon-nav-bar {
+  background-image: url("Navbar.png");
+  background-repeat: repeat-x;
+  height: 50px;
+  box-shadow: 10px 3px 5px;
+}
+
+.header-container {
+  background-image: url("backgrounds/header-pattern.png");
+  background-repeat: repeat;
+}
