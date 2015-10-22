@@ -14,7 +14,8 @@ body {
 // --------------------------------------------------
 
 .header-img {
-  height: 600px;
+  min-height: 300px;
+  height: 60vh;
   width: 100%;
 
   margin-top: -20px;
@@ -35,6 +36,11 @@ body {
   top: -100px;
 }
 
+.affix #header-logo {
+  display: none;
+}
+
+// Wings
 #wings {
   position: absolute;
   left: 0;
@@ -43,36 +49,79 @@ body {
   top: 50px;
 }
 
-.affix #header-logo {
+.affix #wings {
   display: none;
 }
 
+// Neon logo (not displayed)
 #header-logo-affix {
   display: none;
 }
 
+// Neon logo (displayed when affixed)
 .affix #header-logo-affix {
   display: inline;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 0px;
+  top: -45px;
 }
 
 #top-nav-bar {
   margin: 0px;
+  text-align: right;
 }
 
+// Primary (neon) navigation affixed to top
 #nav.affix {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: #EEEEEE;
-    background-image: url("Navbar.png");
-    background-repeat: repeat-x;
-    box-shadow: 0px 3px 5px;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 100;
+  background-color: #EEEEEE;
+  background-image: url("Navbar.png");
+  background-repeat: repeat-x;
+  box-shadow: 0px 3px 5px;
+}
+
+// Secondary (checkered) navigation affixed to top
+#header #secondNav.affix {
+  position: fixed;
+  right: 0;
+  top: 0px;
+  width: 100%;
+  z-index: 90;
+  background-image: url("backgrounds/header-pattern.png");
+  background-repeat: repeat-x;
+}
+
+#header {
+  height: 100px;
+  width: 100%;
+}
+
+div#secondNav.affix {
+  height: 50px;
+  width: 100%;
+}
+
+div#secondNav.affix .row {
+  margin: 0;
+  padding: 0;
+}
+
+#affix-space {
+  display: none;
+}
+
+.affix #affix-space {
+  display: inline;
+}
+
+// Hide small logo in secondary nav when affixed
+.affix #nav-logo {
+  display: none;
 }
 
 #neon-nav-bar {
