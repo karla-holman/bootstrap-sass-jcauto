@@ -2,6 +2,13 @@
 // Custom CSS
 // --------------------------------------------------
 
+// Body
+// --------------------------------------------------
+
+body {
+  color: #7d7d7d;
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=bdbbbd&density=24&opacity=15);
+}
 
 // Header
 // --------------------------------------------------
@@ -65,17 +72,107 @@
     background-color: #EEEEEE;
     background-image: url("Navbar.png");
     background-repeat: repeat-x;
-    box-shadow: 10px 3px 5px;
+    box-shadow: 0px 3px 5px;
 }
 
 #neon-nav-bar {
   background-image: url("Navbar.png");
   background-repeat: repeat-x;
   height: 50px;
-  box-shadow: 10px 3px 5px;
+  box-shadow: 0px 3px 5px;
 }
 
 .header-container {
   background-image: url("backgrounds/header-pattern.png");
   background-repeat: repeat;
+}
+
+.bar-image {
+  background-image: url("backgrounds/bar-pattern.png");
+  background-repeat: repeat;
+  height: 25px;
+  box-shadow: 0px 3px 5px;
+}
+
+
+// Footer
+// --------------------------------------------------
+
+footer {
+  color: #fff;
+}
+
+#footer-light {
+  min-height: 350px;
+  background-image: url("backgrounds/footer-pattern.png");
+  background-repeat: repeat;
+
+  box-shadow: 0px 3px 5px;
+}
+
+#footer-light ul {
+  list-style-type: none;
+
+}
+
+#footer-light a {
+  color: #fff;
+  font-weight: 700;
+}
+
+#footer-light a:hover {
+  color: #646464;
+  text-decoration: none;
+}
+
+#footer-light hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #fff;
+  margin: 1em 0;
+  padding: 0; 
+}
+
+#footer-dark {
+  min-height: 50px;
+  background-image: url("backgrounds/footer-dark-pattern.png");
+  background-repeat: repeat;
+  color: #fff;
+
+
+}
+
+
+// Buttons
+// --------------------------------------------------
+
+.btn-neon {
+  background-image: url("buttons/blue-button.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 100px;
+  width: 200px;
+} 
+
+// Typography
+// --------------------------------------------------
+
+.inverse {
+  color: #fff;
+}
+
+h3 {
+  font-family: $font-family-sans-serif;
+}
+
+p {
+  font-family: $font-family-serif
+}
+// Bootstrap Component Modifications
+// --------------------------------------------------
+.row{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px 0px;
 }
