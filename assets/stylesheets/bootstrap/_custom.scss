@@ -33,7 +33,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: -100px;
+  top: -10px;
 }
 
 .affix #header-logo {
@@ -126,6 +126,12 @@ div#secondNav.affix .row {
 
 #neon-nav-bar {
   background-image: url("Navbar.png");
+  background-repeat: repeat-x;
+  height: 50px;
+  box-shadow: 0px 3px 5px;
+}
+#red-nav-bar {
+  background-image: url("red-bar.png");
   background-repeat: repeat-x;
   height: 50px;
   box-shadow: 0px 3px 5px;
