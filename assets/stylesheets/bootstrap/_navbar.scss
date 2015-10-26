@@ -22,6 +22,17 @@
   }
 }
 
+.navbar a {
+  font-weight: 700;
+  font-size: $font-size-large;
+  color: #ffffff;
+}
+
+.navbar a:hover {
+  font-weight: 700;
+  font-size: $font-size-large;
+  color: #020f34;
+}
 
 // Navbar heading
 //
