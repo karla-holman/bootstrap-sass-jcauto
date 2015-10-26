@@ -45,6 +45,7 @@ $link-hover-decoration: underline !default;
 
 $font-family-sans-serif:  "Orbitron", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       "Playfair Display", Times, serif !default;
+$font-family-display:     "Sonsie One"
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
@@ -66,7 +67,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    $font-family-serif !default;
+$headings-font-family:    $font-family-display !default;
 $headings-font-weight:    700 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          #7d7d7d !default;
