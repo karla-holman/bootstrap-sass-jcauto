@@ -164,7 +164,8 @@ footer {
 #footer {
   min-height: 50px;
   background-image: url("backgrounds/footer.png");
-  background-repeat: repeat;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
   color: #fff;
 }
 
@@ -225,6 +226,8 @@ img.icon {
 // --------------------------------------------------
 
 @media (max-width: $screen-sm-min) {
+  // HEADER------------------------------------------
+
   // Hide logo in menu
   #header-logo {
     display: none;
@@ -322,4 +325,11 @@ img.icon {
   #brand {
     display: inline;
   }
+
+  // FOOTER -------------------------------
+
+}
+
+@media (max-width: $screen-md-min) {
+
 }
