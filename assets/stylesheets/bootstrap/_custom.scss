@@ -28,6 +28,10 @@ body {
   background-position: center;
 }
 
+#about-overlay {
+  display: none;
+}
+
 // Center logo image
 #header-logo {
   position: absolute;
@@ -92,6 +96,14 @@ div#secondNav .row {
 #nav-bar {
   color: $brand-blue;
   font-size: $font-size-base;
+}
+
+#collapseSearch {
+  display: none;
+}
+
+#header-logo-collapse {
+  display: none;
 }
 
 // Footer
@@ -187,6 +199,9 @@ h3 {
   font-family: $font-family-sans-serif;
   color: #363636;
 }
+h4 {
+  font-family: $font-family-display;
+}
 
 // Bootstrap Component Modifications
 // --------------------------------------------------
@@ -198,4 +213,103 @@ h3 {
 
 img.icon {
   width: 300px;
+}
+
+
+// media queries
+// --------------------------------------------------
+
+@media (max-width: $screen-sm-min) {
+  // Hide logo in menu
+  #header-logo {
+    display: none;
+  }
+
+  // Collapsed menu
+  #main-nav-bar {
+    background-image: url("backgrounds/footer.png");
+    background-repeat: repeat-x;
+    background-color: #041e68;
+    background-size: auto 100%;
+  }
+
+  // Links in Menu hover yellow
+  #main-nav-bar a:hover {
+    color: #e9c61a;
+  }
+
+  #secondNav {
+    display: none;
+  }
+
+  #nav {
+    top: 0px;
+  }
+
+  #nav.affix {
+    top: 0px;
+  }
+
+  // Toggle Menu
+  #primaryToggleButton {
+    background-color: #e9c61a;
+    padding: 0 5px;
+  }
+
+  // Display search on collapsed menu
+  #collapseSearch {
+    display: inline;
+  }
+
+  // Fit search inside menu
+  #collapseSearch .navbar-form {
+    width: 100%;
+    margin: 0;
+  }
+  // Make search button width of field
+  #collapseSearch .btn {
+    width: 100%;
+  }
+
+  // Adjust car image for mobile
+  .header-img {
+    // width: 100%;
+    height: 100vh;
+    //min-height: 600px;
+
+    margin-top: 0;
+
+    background-image: url("Header Image-dark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+    background-position: center;
+
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  #about-overlay{
+    display: inline;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    z-index: 70;
+    color: #ffffff;
+  }
+
+  // Adjust logo for mobile
+  #header-logo-collapse {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 60%;
+    z-index: 70;
+  }
 }
