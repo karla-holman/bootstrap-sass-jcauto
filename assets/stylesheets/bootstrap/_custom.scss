@@ -179,6 +179,10 @@ footer {
   background-position: left;
 }
 
+.container-yellow {
+  background-color: #f8eebb;
+}
+
 // Buttons
 // --------------------------------------------------
 
@@ -209,6 +213,31 @@ h4 {
   font-family: $font-family-display;
 }
 
+// image Sections
+// --------------------------------------------------
+
+.image-background {
+  width: 100%;
+  max-height: 400px;
+}
+
+#shop {
+  background-image: url("Shop Image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#cars {
+  background-image: url("Car Image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
 // Bootstrap Component Modifications
 // --------------------------------------------------
 .row{
@@ -218,7 +247,8 @@ h4 {
 }
 
 img.icon {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
 }
 
 
@@ -292,8 +322,6 @@ img.icon {
     background-size: cover;
     // background-attachment: fixed;
     background-position: center;
-
-    background-color: rgba(0,0,0,0.8);
   }
 
   #about-overlay{
