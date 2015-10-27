@@ -46,6 +46,11 @@ body {
   text-align: right;
 }
 
+// JC Auto Brand Link (left)
+#brand {
+  display: none;
+}
+
 // Primary navigation always affixed to top
 #nav {
   position: fixed;
@@ -311,5 +316,10 @@ img.icon {
     margin: 0 auto;
     width: 60%;
     z-index: 70;
+  }
+
+  // JC Auto Brand Link (left)
+  #brand {
+    display: inline;
   }
 }
