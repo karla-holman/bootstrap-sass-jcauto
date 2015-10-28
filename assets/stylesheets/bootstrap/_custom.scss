@@ -111,6 +111,10 @@ div#secondNav .row {
   display: none;
 }
 
+tertiaryNav .nav-pills li {
+  text-align: center;
+}
+
 // Footer
 // --------------------------------------------------
 
@@ -203,7 +207,7 @@ footer {
 
 h1 {
   font-family: $font-family-display;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 h3 {
   font-family: $font-family-sans-serif;
@@ -211,6 +215,12 @@ h3 {
 }
 h4 {
   font-family: $font-family-display;
+  margin-top: -20px;
+}
+
+p.intro {
+  width: 80%;
+  margin: 0px auto 50px auto;
 }
 
 // image Sections
