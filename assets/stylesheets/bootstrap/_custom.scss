@@ -39,10 +39,45 @@ body {
   right: 0;
   margin: 0 auto;
   top: -90px;
+  width: 250px;
 }
-// Center logo image
+// Center logo image affixed
 .affix #header-logo {
-  //display: none;
+  display:none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -100px;
+
+  width: 180px;
+}
+
+// Center logo text (hide)
+#header-logo-affix {
+  display: none;
+}
+
+// Center logo text affixed
+.affix #header-logo-affix {
+  display: inline;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 7px;
+  width: 200px;
+}
+
+// Center logo text link
+.affix #header-logo-affix a {
+  font-size: 1.5em;
+  font-family: 'Orbitron';
+  text-decoration: none;
+}
+
+#sm-logo {
+  display:none;
 }
 
 #top-nav-bar {
@@ -69,18 +104,47 @@ body {
   background-position: center center;
 }
 
-// Secondary (checkered) navigation affixed to top
-#secondNav.affix {
-  background-image: url("backgrounds/header-pattern.png");
-  background-repeat: repeat-x;
+// Primary navigation always affixed to top
+#nav.affix {
+  top: 50px;
 }
+
+// Tertiary nav (page sections)
+div#tertiaryNav {
+  height: 30px !important;
+  background-color: $brand-blue;
+  text-align: center;
+}
+
+div#tertiaryNav li a {
+  font-size: $font-size-base;
+  padding: 5px 20px;
+  color: #fff;
+}
+
+div#tertiaryNav ul {
+  text-align: center;
+}
+
+div#tertiaryNav li {
+  float:none;
+  display:inline-block;
+  vertical-align:middle;
+  margin: 0 auto;
+}
+
 
 // Tertiary nav (page sections)
 #tertiaryNav.affix {
   position: fixed;
-  top: 150px;
+  top: 100px;
   width: 100%;
   z-index: 100;
+  // box-shadow: 0 4px 10px #000;
+}
+
+#tertiaryNav ul {
+  float: none;
 }
 
 #header {
@@ -101,6 +165,17 @@ div#secondNav .row {
   top: 0px;
   width: 100%;
   z-index: 90;
+}
+
+// Secondary (checkered) navigation affixed to top
+#secondNav.affix {
+  background-image: url("backgrounds/header-pattern.png");
+  background-repeat: repeat-x;
+  height: 50px;
+}
+div#secondNav.affix .row {
+  margin: 0px;
+  padding: 0px 0px;
 }
 
 .bar-image {
@@ -196,7 +271,19 @@ footer {
 }
 
 .container-yellow {
-  background-color: #f8eebb;
+  background-color: #fbf9ba;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* inline-block space fix */
+  margin-right:-4px;
+  margin-bottom: 50px;
 }
 
 // Buttons
@@ -215,6 +302,11 @@ footer {
   font-size: $font-size-large;
   height: 50px;
   width: 200px;
+}
+
+a.button-link:hover {
+  text-decoration: none;
+  color: $brand-blue;
 }
 
 a.button-link:hover img {
@@ -247,6 +339,11 @@ p.intro {
   font-size: 1.4em;
 }
 
+p.caption {
+  text-align: center;
+  margin-top: 10px;
+}
+
 // image Sections
 // --------------------------------------------------
 
@@ -255,7 +352,7 @@ p.intro {
   max-height: 400px;
 }
 
-#shop {
+#the_shop {
   background-image: url("Shop Image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -263,7 +360,7 @@ p.intro {
   background-position: center;
 }
 
-#cars {
+#our_cars {
   background-image: url("Car Image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -282,13 +379,77 @@ p.intro {
 
 img.icon {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
+}
+
+img.icon-retro {
+  width: 100%;
+  background-image: url('backgrounds/retro-background-icon.png');
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+img.icon-retro-tri {
+  width: 100%;
+  background-image: url('backgrounds/retro-background-tri.png');
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+// Responsive Image Gallery
+// --------------------------------------------------
+
+.gallery_container {
+  background-image: url('backgrounds/retro-background.png');
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#imageGallery {
+  margin: 15px 0;
+}
+
+// caption
+#caption {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin: 10px 0;
+  padding: 15px;
+}
+
+#caption p {
+  font-weight: 400;
+}
+
+.thumb_selected {
+  opacity: 0.7;
+} 
+
+// navigation
+.gallery-arrow-left img{
+  width: 5%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+
+.gallery-arrow-right img{
+  width: 5%;
+  position: absolute;
+  top: 50%;
+  right: 5%;
 }
 
 
 // media queries
 // --------------------------------------------------
 
+// Handle Mobile devices
 @media (max-width: $screen-sm-min) {
   
   body {
@@ -296,6 +457,14 @@ img.icon {
   }
 
   // HEADER------------------------------------------
+  #tertiaryNav {
+    min-height: 80px !important;
+  }
+  // Tertiary nav (page sections)
+  #tertiaryNav.affix {
+    position: static;
+    box-shadow: none;
+  }
 
   // Hide logo in menu
   #header-logo {
@@ -304,6 +473,14 @@ img.icon {
 
   // Collapsed menu
   #main-nav-bar {
+    background-image: url("backgrounds/footer.png");
+    background-repeat: repeat-x;
+    background-color: #041e68;
+    background-size: auto 100%;
+  }
+
+    // Collapsed menu
+  #tertiary-nav-bar {
     background-image: url("backgrounds/footer.png");
     background-repeat: repeat-x;
     background-color: #041e68;
@@ -320,6 +497,10 @@ img.icon {
   }
 
   #nav {
+    top: 0px;
+  }
+
+  #nav.affix {
     top: 0px;
   }
 
@@ -393,12 +574,69 @@ img.icon {
     margin-bottom: 50px;
   }
 
+  // Gallery
+  .gallery-arrow-left img{
+    left: 10%;
+  }
+
+  .gallery-arrow-right img{
+    right: 10%;
+  }
+
   // FOOTER -------------------------------
   footer {
     text-align: left;
   }
 }
 
+// Handle tablets (sm devices)
 @media (max-width: $screen-md-min) {
+  // Hide logo in menu
+  #header-logo {
+    display: none;
+  }
 
+  .affix #header-logo-affix {
+    display:none;
+  }
+
+  #main-nav-bar a, #tertiaryNav a {
+    font-size: $font-size-base;
+  }
+
+  #sm-logo {
+    display: inline;
+    font-size: 1.4em;
+    font-family: "Orbitron";
+    padding: 10px 0;
+  }
+}
+
+// Handle medium desktops (md devices)
+@media (max-width: $screen-lg-min) {
+  // Hide logo in menu
+  #header-logo {
+    width: 200px;
+    top: -70px;
+  }
+
+  .affix #header-logo-affix a {
+    font-size: 1.5em;
+  }
+
+  #main-nav-bar a, #tertiaryNav a {
+    font-size: $font-size-base;
+  }
+}
+
+// Handle large desktops (lg devices)
+@media (min-width: $screen-lg-min) {
+
+  .affix #header-logo-affix a {
+    font-size: 1.6em;
+  }
+  // Center logo image
+  .affix #header-logo-affix {
+    width: 250px;
+  }
 }
