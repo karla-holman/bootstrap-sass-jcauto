@@ -111,15 +111,18 @@ body {
 
 // Tertiary nav (page sections)
 div#tertiaryNav {
-  height: 30px !important;
+  height: 50px !important;
   background-color: $brand-blue;
   text-align: center;
 }
 
 div#tertiaryNav li a {
   font-size: $font-size-base;
-  padding: 5px 20px;
+  padding: 15px 40px;
   color: #fff;
+}
+div#tertiaryNav li a:hover {
+  color: $brand-primary;
 }
 
 div#tertiaryNav ul {
@@ -200,6 +203,10 @@ div#secondNav.affix .row {
 
 #tertiaryNav .nav-pills li {
   text-align: center;
+}
+
+.current-page a {
+  color: $brand-primary !important;
 }
 
 // Footer
@@ -418,8 +425,6 @@ img.icon-retro-tri {
   width: 100%;
   height: 50px;
   text-align: center;
-  margin: 10px 0;
-  padding: 15px;
 }
 
 #caption p {
@@ -436,6 +441,7 @@ img.icon-retro-tri {
   position: absolute;
   top: 50%;
   left: 5%;
+  z-index: 100;
 }
 
 .gallery-arrow-right img{
@@ -497,7 +503,7 @@ img.icon-retro-tri {
   }
 
   #nav {
-    top: 100px;
+    top: 0px;
   }
 
   #nav.affix {
@@ -606,6 +612,14 @@ img.icon-retro-tri {
     background-size: 100% 100%;
   }
 
+  #the_shop {
+    display: none;
+  }
+
+  #our_cars {
+    display: none;
+  }
+
   // FOOTER -------------------------------
   footer {
     text-align: left;
@@ -645,8 +659,12 @@ img.icon-retro-tri {
     margin: 0px;
     padding: 0px 0px;
   }
-  #nav {
-    top: 50px;
+  //#nav {
+    //top: 50px;
+  //}
+
+  div[class*='col-']:last-child {
+    margin-bottom: 0px;
   }
 
   div[class*='col-']{
