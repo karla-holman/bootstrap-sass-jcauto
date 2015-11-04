@@ -449,7 +449,7 @@ img.icon-retro-tri {
 // media queries
 // --------------------------------------------------
 
-// Handle Mobile devices
+// Handle Mobile devices (xs)
 @media (max-width: $screen-sm-min) {
   
   body {
@@ -497,7 +497,7 @@ img.icon-retro-tri {
   }
 
   #nav {
-    top: 0px;
+    top: 100px;
   }
 
   #nav.affix {
@@ -583,6 +583,29 @@ img.icon-retro-tri {
     right: 10%;
   }
 
+  img.icon {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  img.icon-retro {
+    width: 100%;
+    max-width: 300px;
+    background-image: url('backgrounds/retro-background-icon.png');
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  img.icon-retro-tri {
+    width: 100%;
+    max-width: 300px;
+    background-image: url('backgrounds/retro-background-tri.png');
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
   // FOOTER -------------------------------
   footer {
     text-align: left;
@@ -609,6 +632,25 @@ img.icon-retro-tri {
     font-size: 1.4em;
     font-family: "Orbitron";
     padding: 10px 0;
+  }
+
+  #sm-logo a:hover {
+    text-decoration: none;
+  }
+
+  #secondNav{
+    height: 50px;
+  }
+  div#secondNav .row {
+    margin: 0px;
+    padding: 0px 0px;
+  }
+  #nav {
+    top: 50px;
+  }
+
+  div[class*='col-']{
+    margin-bottom: 50px;
   }
 }
 
@@ -637,6 +679,6 @@ img.icon-retro-tri {
   }
   // Center logo image
   .affix #header-logo-affix {
-    width: 250px;
+    width: 225px;
   }
 }
