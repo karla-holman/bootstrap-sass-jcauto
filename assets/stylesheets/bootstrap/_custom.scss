@@ -264,7 +264,6 @@ footer {
   float:none;
   /* inline-block space fix */
   margin-right:-4px;
-  margin-bottom: 50px;
 }
 
 // Buttons
@@ -394,6 +393,9 @@ ul.mopar-list {
 // Responsive Image Gallery
 // --------------------------------------------------
 
+.gallery_container_mobile{
+  display: none;
+}
 .gallery_container {
   background-image: url('backgrounds/retro-background.png');
   padding: 20px;
@@ -401,7 +403,7 @@ ul.mopar-list {
   background-size: 100% 100%;
 }
 
-#imageGallery {
+#imageGallery_thumb {
   margin: 15px 0;
 }
 
@@ -601,12 +603,25 @@ ul.mopar-list {
   div[class*='col-']{
     margin-bottom: 50px;
   }
+  div[class*='col-']:last-child {
+    margin-bottom: 0px;
+  }
 
   #collapseSearch div[class*='col-']{
     margin-bottom: 30px;
   }
 
-  // Gallery
+  // GALLERY ------------------------------
+
+  .gallery_container {
+    display: none;
+  }
+
+ .gallery_container_mobile {
+    width: 100%;
+    padding: 0;
+    display: inline;
+  }
   .gallery-arrow-left img{
     left: 10%;
   }
@@ -690,14 +705,6 @@ ul.mopar-list {
   }
   #nav {
     top: 50px;
-  }
-
-  div[class*='col-']:last-child {
-    margin-bottom: 0px;
-  }
-
-  div[class*='col-']{
-    margin-bottom: 50px;
   }
 }
 
