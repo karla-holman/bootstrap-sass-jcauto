@@ -28,10 +28,6 @@ body {
   background-position: center;
 }
 
-#about-overlay {
-  display: none;
-}
-
 // Center logo image
 #header-logo {
   position: absolute;
@@ -53,11 +49,6 @@ body {
   width: 180px;
 }
 
-// Center logo text (hide)
-#header-logo-affix {
-  display: none;
-}
-
 // Center logo text affixed
 .affix #header-logo-affix {
   display: inline;
@@ -76,18 +67,14 @@ body {
   text-decoration: none;
 }
 
-#sm-logo {
-  display:none;
+// Logo on sm screen
+a#brand {
+  font-family: 'Orbitron';
 }
 
 #top-nav-bar {
   margin: 0px;
   text-align: right;
-}
-
-// JC Auto Brand Link (left)
-#brand {
-  display: none;
 }
 
 // Primary navigation always affixed to top
@@ -151,11 +138,6 @@ div#tertiaryNav li {
   float: none;
 }
 
-#header {
-  height: 100px;
-  width: 100%;
-}
-
 div#secondNav .row {
   margin: 0px;
   padding: 25px 0px;
@@ -168,7 +150,7 @@ div#secondNav .row {
   right: 0;
   top: 0px;
   width: 100%;
-  z-index: 90;
+  z-index: 110; // Allow dropdown to sit over nav
 }
 
 // Secondary (checkered) navigation affixed to top
@@ -182,23 +164,13 @@ div#secondNav.affix .row {
   padding: 0px 0px;
 }
 
-.bar-image {
-  background-image: url("backgrounds/bar-pattern.png");
-  background-repeat: repeat;
-  height: 25px;
-  box-shadow: 0px 3px 5px;
-}
-
 #nav-bar {
   color: $brand-blue;
   font-size: $font-size-base;
 }
 
-#collapseSearch {
-  display: none;
-}
-
-#header-logo-collapse {
+// Hide content for sm or xs layouts
+#collapseSearch, #collapseAccount, #header-logo-collapse, #brand, #sm-logo, #header-logo-affix, #about-overlay {
   display: none;
 }
 
@@ -206,6 +178,7 @@ div#secondNav.affix .row {
   text-align: center;
 }
 
+// Current page's nav link is yellow
 .current-page a {
   color: $brand-primary !important;
 }
@@ -414,6 +387,9 @@ img.icon-retro-tri {
   background-size: 100% 100%;
 }
 
+ul.mopar-list {
+  list-style-image: url('bullet-point.png');
+}
 
 // Responsive Image Gallery
 // --------------------------------------------------
@@ -472,11 +448,11 @@ img.icon-retro-tri {
   }
 
   // HEADER------------------------------------------
-  #tertiaryNav {
-    min-height: 80px !important;
+  div#tertiaryNav {
+    height: auto !important;
   }
   // Tertiary nav (page sections)
-  #tertiaryNav.affix {
+  div#tertiaryNav.affix {
     position: static;
     box-shadow: none;
   }
@@ -488,10 +464,11 @@ img.icon-retro-tri {
 
   // Collapsed menu
   #main-nav-bar {
-    background-image: url("backgrounds/footer.png");
-    background-repeat: repeat-x;
-    background-color: #041e68;
-    background-size: auto 100%;
+    color: #A4A6A9;
+    background-color: #363636;
+    // border: #A4A6A9 solid 1px;
+    width: 100%;
+    padding: 0;
   }
 
     // Collapsed menu
@@ -502,16 +479,45 @@ img.icon-retro-tri {
     background-size: auto 100%;
   }
 
-  // Links in Menu hover yellow
+   #main-nav-bar a {
+    color: #fff;
+    border-bottom: 1px solid #A4A6A9;
+    display: block;
+    float: left;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    background-color: #363636;
+   }
+
   #main-nav-bar a:hover {
-    color: #e9c61a;
+    background-color: #A4A6A9;
+    color: #fff;
+    transition: all 0.25s ease-in-out 0s;
+    text-decoration: none;
+   }
+
+   #main-nav-bar ul {
+    margin: 0;
+   }
+
+  // Display account buttons on collapsed menu
+  #collapseAccount {
+    display: inline;
+  }
+  #collapseAccount a {
+    display: inline;
+    background-color: $brand-blue;
   }
 
   #secondNav {
     display: none;
   }
 
-  #nav {
+  nav#nav {
     top: 0px;
   }
 
@@ -523,6 +529,13 @@ img.icon-retro-tri {
   #primaryToggleButton {
     background-color: #e9c61a;
     padding: 0 5px;
+  }
+
+  #primary-nav {
+    // Take full width of screen
+    padding-left: 0;  
+    padding-right: 0;
+    border-top: 0px;
   }
 
   // Display search on collapsed menu
@@ -589,6 +602,10 @@ img.icon-retro-tri {
     margin-bottom: 50px;
   }
 
+  #collapseSearch div[class*='col-']{
+    margin-bottom: 30px;
+  }
+
   // Gallery
   .gallery-arrow-left img{
     left: 10%;
@@ -633,6 +650,13 @@ img.icon-retro-tri {
 
 // Handle tablets (sm devices)
 @media (max-width: $screen-md-min) {
+  div#tertiaryNav {
+    height: auto !important;
+  }
+  div#tertiaryNav li a {
+    padding: 15px 20px;
+  }
+
   // Hide logo in menu
   #header-logo {
     display: none;
@@ -664,9 +688,9 @@ img.icon-retro-tri {
     margin: 0px;
     padding: 0px 0px;
   }
-  //#nav {
-    //top: 50px;
-  //}
+  #nav {
+    top: 50px;
+  }
 
   div[class*='col-']:last-child {
     margin-bottom: 0px;
@@ -679,7 +703,7 @@ img.icon-retro-tri {
 
 // Handle medium desktops (md devices)
 @media (max-width: $screen-lg-min) {
-  // Hide logo in menu
+  // Position logo in nav
   #header-logo {
     width: 200px;
     top: -70px;
@@ -703,5 +727,6 @@ img.icon-retro-tri {
   // Center logo image
   .affix #header-logo-affix {
     width: 225px;
+    margin-top: -3px;
   }
 }
