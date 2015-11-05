@@ -112,14 +112,15 @@ body {
 // Tertiary nav (page sections)
 div#tertiaryNav {
   height: 50px !important;
-  background-color: $brand-blue;
+  background-color: #fff;
   text-align: center;
+  border-bottom: 1px solid #A4A6A9;
 }
 
 div#tertiaryNav li a {
   font-size: $font-size-base;
   padding: 15px 40px;
-  color: #fff;
+  color: #A4A6A9;
 }
 div#tertiaryNav li a:hover {
   color: $brand-primary;
@@ -375,6 +376,14 @@ p.caption {
   background-position: center;
 }
 
+#the_parts {
+  background-image: url("The Parts.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 
 // Bootstrap Component Modifications
 // --------------------------------------------------
@@ -612,12 +621,8 @@ img.icon-retro-tri {
     background-size: 100% 100%;
   }
 
-  #the_shop {
-    display: none;
-  }
-
-  #our_cars {
-    display: none;
+  .image-background {
+    display:none;
   }
 
   // FOOTER -------------------------------
