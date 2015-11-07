@@ -23,15 +23,15 @@
 }
 
 .navbar a {
-  font-weight: 700;
-  font-size: $font-size-large;
+  font-weight: $nav-footer-link-weight;
+  font-size: $font-size-base;
   color: #ffffff;
 }
 
 .navbar a:hover {
-  font-weight: 700;
-  font-size: $font-size-large;
-  color: #020f34;
+  font-weight: $nav-footer-link-weight;
+  font-size: $font-size-base;
+  color: $brand-blue;
 }
 
 // Navbar heading
