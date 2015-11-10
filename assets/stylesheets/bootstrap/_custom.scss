@@ -111,7 +111,6 @@ div#tertiaryNav {
 
 div#tertiaryNav li a {
   font-size: $font-size-base;
-  padding: 12px 40px;
   color: #A4A6A9;
 }
 div#tertiaryNav li a:hover {
@@ -127,6 +126,7 @@ div#tertiaryNav li {
   display:inline-block;
   vertical-align:middle;
   margin: 0 auto;
+  width: 200px;
 }
 
 
@@ -237,7 +237,6 @@ footer {
 
 #footer hr {
   display: block;
-  height: 1px;
   border: 0;
   border-top: 1px solid #fff;
   margin: 1em 0;
@@ -418,6 +417,7 @@ ul.mopar-list {
   padding: 20px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  position: relative;
 }
 
 #imageGallery_thumb {
@@ -445,7 +445,7 @@ ul.mopar-list {
   position: absolute;
   top: 50%;
   left: 5%;
-  z-index: 100;
+  z-index: 90;
 }
 
 .gallery-arrow-right img{
@@ -453,8 +453,13 @@ ul.mopar-list {
   position: absolute;
   top: 50%;
   right: 5%;
+  z-index: 90;
 }
 
+// Gallery information
+#info {
+  text-align: left;
+}
 
 // media queries
 // --------------------------------------------------
@@ -474,6 +479,9 @@ ul.mopar-list {
   div#tertiaryNav.affix {
     position: static;
     box-shadow: none;
+  }
+  div#tertiaryNav li {
+    width: 150px;
   }
 
   // Hide logo in menu
@@ -652,7 +660,8 @@ ul.mopar-list {
   }
 
  .gallery_container_mobile {
-    width: 100%;
+    min-width: 100%;
+    //height: 60vh;
     padding: 0;
     display: block;
   }
@@ -690,25 +699,20 @@ ul.mopar-list {
   }
 
   img.icon-retro {
-    width: 100%;
     max-width: 300px;
-    background-image: url('backgrounds/retro-background-icon.png');
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
   }
 
   img.icon-retro-tri {
-    width: 100%;
     max-width: 300px;
-    background-image: url('backgrounds/retro-background-tri.png');
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
   }
 
   .image-background {
     display:none;
+  }
+
+  // Gallery information
+  #info {
+    text-align: center;
   }
 
   // FOOTER -------------------------------
@@ -723,9 +727,11 @@ ul.mopar-list {
     height: auto !important;
   }
   div#tertiaryNav li a {
-    padding: 15px 20px;
+    //padding: 15px 20px;
   }
-
+  div#tertiaryNav li {
+    width: 145px !important;
+  }
   // Hide logo in menu
   #header-logo {
     display: none;
@@ -760,6 +766,11 @@ ul.mopar-list {
   #nav {
     top: 50px;
   }
+
+  // Gallery information
+  #info {
+    text-align: center;
+  }
 }
 
 // Handle medium desktops (md devices)
@@ -777,6 +788,13 @@ ul.mopar-list {
 
   #main-nav-bar a, #tertiaryNav a {
     font-size: $font-size-base;
+  }
+
+  div#tertiaryNav li {
+    width: 175px;
+  }
+  div#tertiaryNav {
+    height: auto !important;
   }
 }
 
