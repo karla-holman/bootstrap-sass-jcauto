@@ -10,6 +10,8 @@ body {
   //background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=bdbbbd&density=24&opacity=15);
   //background-image: url("backgrounds/header-pattern.png");
   //background-repeat: repeat;
+  font-weight: 300;
+  letter-spacing: 0.25px;
 }
 
 // Header
@@ -38,6 +40,20 @@ body {
   width: 250px;
   text-transform: none;
 }
+
+// Show logo in Spree menu
+#header-logo-spree {
+  position: absolute;
+  width: 250px;
+  top: 0px;
+  padding-top: 3px;
+  font-family: 'Orbitron';
+}
+#header-logo-spree a {
+  margin: 0;
+  font-size: 1.6em;
+  text-transform: none;
+}
 // Center logo image affixed
 .affix #header-logo {
   display:none;
@@ -57,7 +73,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 7px;
+  top: 5px;
   width: 200px;
   text-transform: none;
 }
@@ -68,6 +84,7 @@ body {
   font-family: 'Orbitron';
   text-decoration: none;
   text-transform: none;
+  letter-spacing: 0px;
 }
 
 // Logo on sm screen
@@ -188,6 +205,11 @@ div#secondNav.affix .row {
   color: $brand-primary !important;
 }
 
+// Alert links
+.alert-info a {
+  font-weight: 600;
+}
+
 // Footer
 // --------------------------------------------------
 
@@ -263,7 +285,7 @@ footer {
 }
 
 .container-yellow {
-  background-color: #fbf9ba;
+  background-color: $brand-yellow-very-light;
 }
 
 /* centered columns styles */
@@ -300,6 +322,13 @@ footer {
   width: 200px;
 }
 
+[class*='col-'][class*='-2'] .button-link{
+  color: $brand-red;
+  font-size: $font-size-base;
+  height: 50px;
+  width: 200px;
+}
+
 a.button-link:hover {
   text-decoration: none;
   color: $brand-blue;
@@ -320,6 +349,10 @@ h1 {
   font-family: $font-family-display;
   margin-bottom: 30px;
 }
+h2 {
+  font-family: $font-family-body;
+  margin-bottom: 30px;
+}
 h3 {
   font-family: $font-family-sans-serif;
   color: #363636;
@@ -327,6 +360,10 @@ h3 {
 h4 {
   font-family: $font-family-display;
   margin-top: -20px;
+}
+h5 {
+  font-family: $font-family-body;
+  font-weight: 600;
 }
 
 p.intro {
@@ -378,6 +415,12 @@ p.caption {
 .row{
   margin-top: 10px;
   margin-bottom: 25px;
+  padding: 20px 0px;
+}
+
+.admin .row{
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding: 20px 0px;
 }
 
@@ -464,6 +507,112 @@ ul.mopar-list {
 // media queries
 // --------------------------------------------------
 
+// Handle large desktops (lg devices)
+@media (min-width: $screen-lg-min) {
+
+  .affix #header-logo-affix a {
+    font-size: 1.6em;
+  }
+  // Center logo image
+  .affix #header-logo-affix {
+    width: 225px;
+    margin-top: -3px;
+  }
+}
+
+// Handle medium desktops (md devices)
+@media (max-width: $screen-lg-min) {
+  // Position logo in nav
+  #header-logo {
+    width: 200px;
+    top: -70px;
+  }
+
+  .affix #header-logo-affix a {
+    font-size: 1.3em;
+    padding-left: 15px;
+  }
+  .affix #header-logo-affix {
+    margin-top: 1px;
+  }
+
+  #main-nav-bar a, #tertiaryNav a {
+    font-size: 0.9em;
+  }
+
+  div#tertiaryNav li {
+    width: 175px;
+  }
+  div#tertiaryNav {
+    height: auto !important;
+  }
+
+  #header-logo-spree a {
+    font-size: 1.6em;
+  }
+}
+
+// Handle tablets (sm devices)
+@media (max-width: $screen-md-min) {
+  div#tertiaryNav {
+    height: auto !important;
+  }
+  div#tertiaryNav li a {
+    //padding: 15px 20px;
+  }
+  div#tertiaryNav li {
+    width: 145px !important;
+  }
+  // Hide logo in menu
+  #header-logo {
+    display: none;
+  }
+  .affix #header-logo-affix {
+    display:none;
+  }
+
+  #main-nav-bar a, #tertiaryNav a {
+    font-size: 0.9em;
+  }
+
+  #sm-logo {
+    display: inline;
+    font-size: 1.2em;
+    font-family: "Orbitron";
+    padding: 10px 0;
+    text-transform: none;
+  }
+
+  #sm-logo a:hover {
+    text-decoration: none;
+  }
+
+  #secondNav{
+    height: 50px;
+  }
+  div#secondNav .row {
+    margin: 0px;
+    padding: 0px 0px;
+  }
+  #nav {
+    top: 50px;
+  }
+
+  #nav-bar {
+    color: $brand-blue;
+    font-size: 0.8em;
+  }
+
+  #header-logo-spree a {
+    font-size: 1.6em;
+  }
+
+  // Gallery information
+  #info {
+    text-align: center;
+  }
+}
+
 // Handle Mobile devices (xs)
 @media (max-width: $screen-sm-min) {
   
@@ -488,11 +637,10 @@ ul.mopar-list {
   #header-logo {
     display: none;
   }
-
   // Collapsed menu
   #main-nav-bar {
-    color: #A4A6A9;
-    background-color: #363636;
+    color: #363636;
+    background-color: #666bab;
     // border: #A4A6A9 solid 1px;
     width: 100%;
     padding: 0;
@@ -508,7 +656,7 @@ ul.mopar-list {
 
    #main-nav-bar a {
     color: #fff;
-    border-bottom: 1px solid #A4A6A9;
+    border-bottom: 1px solid #fff;
     display: block;
     float: left;
     font-weight: 400;
@@ -517,15 +665,34 @@ ul.mopar-list {
     padding: 20px;
     width: 100%;
     text-align: left;
-    background-color: #363636;
+    background-color: #999cc7;
    }
 
   #main-nav-bar a:hover {
-    background-color: #A4A6A9;
+    background-color:$brand-blue;
     color: #fff;
     transition: all 0.25s ease-in-out 0s;
     text-decoration: none;
    }
+
+  #header-logo-spree {
+    position: absolute;
+    width: 250px;
+    top: 0px;
+    padding-top: 0px;
+  }
+  #header-logo-spree a {
+    margin: 0;
+    font-size: 1.1em;
+    text-transform: none;
+    background-color: transparent;
+    border: none;
+    padding-top: 10px;
+  }
+  #header-logo-spree a:hover {
+    text-transform: none;
+    background-color: transparent;  
+  }
 
    #main-nav-bar ul {
     margin: 0;
@@ -537,7 +704,10 @@ ul.mopar-list {
   }
   #collapseAccount a {
     display: inline;
-    background-color: $brand-blue;
+    background-color: #666bab;
+  }
+  #collapseAccount li:first-child a {
+    border-top: 1px solid #fff;
   }
 
   #secondNav {
@@ -580,21 +750,26 @@ ul.mopar-list {
 
   // Display search on collapsed menu
   #collapseSearch {
-    display: inline;
+    display: inline-block;
   }
 
   // Fit search inside menu
-  #collapseSearch .navbar-form {
-    width: 100%;
-    margin: 0;
-    padding-top: 20px;
+  #collapseSearch .form-group {
+    width: 80%;
+    margin: 0 20px;
+    padding-top: 0px;
+    float: left;
   }
   #collapseSearch div:first-child {
     margin-top: 30px;
   }
   // Make search button width of field
   #collapseSearch .btn {
-    width: 100%;
+    width: 8%;
+    float: left;
+  }
+  #collapseSearch .navbar-form {
+    border: none;
   }
 
   // Adjust car image for mobile
@@ -626,15 +801,8 @@ ul.mopar-list {
   }
 
   // Adjust logo for mobile
-  #header-logo-collapse {
+  #header-logo-collapse, #admin-login {
     display: none;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 60%;
-    z-index: 70;
   }
 
   // JC Auto Brand Link (left)
@@ -724,95 +892,5 @@ ul.mopar-list {
   // FOOTER -------------------------------
   footer {
     text-align: left;
-  }
-}
-
-// Handle tablets (sm devices)
-@media (max-width: $screen-md-min) {
-  div#tertiaryNav {
-    height: auto !important;
-  }
-  div#tertiaryNav li a {
-    //padding: 15px 20px;
-  }
-  div#tertiaryNav li {
-    width: 145px !important;
-  }
-  // Hide logo in menu
-  #header-logo {
-    display: none;
-  }
-
-  .affix #header-logo-affix {
-    display:none;
-  }
-
-  #main-nav-bar a, #tertiaryNav a {
-    font-size: 0.9em;
-  }
-
-  #sm-logo {
-    display: inline;
-    font-size: 1.2em;
-    font-family: "Orbitron";
-    padding: 10px 0;
-  }
-
-  #sm-logo a:hover {
-    text-decoration: none;
-  }
-
-  #secondNav{
-    height: 50px;
-  }
-  div#secondNav .row {
-    margin: 0px;
-    padding: 0px 0px;
-  }
-  #nav {
-    top: 50px;
-  }
-
-  // Gallery information
-  #info {
-    text-align: center;
-  }
-}
-
-// Handle medium desktops (md devices)
-@media (max-width: $screen-lg-min) {
-  // Position logo in nav
-  #header-logo {
-    width: 200px;
-    top: -70px;
-  }
-
-  .affix #header-logo-affix a {
-    font-size: 1.3em;
-    padding-left: 15px;
-  }
-
-  #main-nav-bar a, #tertiaryNav a {
-    font-size: $font-size-base;
-  }
-
-  div#tertiaryNav li {
-    width: 175px;
-  }
-  div#tertiaryNav {
-    height: auto !important;
-  }
-}
-
-// Handle large desktops (lg devices)
-@media (min-width: $screen-lg-min) {
-
-  .affix #header-logo-affix a {
-    font-size: 1.6em;
-  }
-  // Center logo image
-  .affix #header-logo-affix {
-    width: 225px;
-    margin-top: -3px;
   }
 }

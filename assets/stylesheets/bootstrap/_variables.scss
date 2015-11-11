@@ -15,14 +15,29 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #ffe100;//darken(#e9c61a, 6.5%) !default; // #337ab7
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
-
 $brand-red: #bf210a;
-$brand-blue: #000873;
+$brand-red-dark: #8f1908;
+$brand-red-med-light: #d97a6c;
+$brand-red-light: #e5a69d;
+$brand-red-very-light: #f2d3ce;
+
+$brand-blue: #200099;
+$brand-blue-dark: #180073;
+$brand-blue-med-light: #7966c2;
+$brand-blue-light: #a699d6;
+$brand-blue-very-light: #d2cceb;
+
+$brand-yellow: #ffe100;
+$brand-yellow-dark: #bfa900;
+$brand-yellow-med-light: #ffed66;
+$brand-yellow-light: #fff399;
+$brand-yellow-very-light: #fff9cc;
+
+$brand-primary:         $brand-yellow; //darken(#e9c61a, 6.5%) !default
+$brand-success:         $brand-yellow !default;
+$brand-info:            $brand-blue !default;
+$brand-warning:         $brand-red !default;
+$brand-danger:          $brand-red-dark !default;
 
 
 //== Scaffolding
@@ -37,9 +52,9 @@ $text-color:            $gray-dark !default;
 //** Global textual link color.
 $link-color:            $brand-blue !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      darken($link-color, 40%) !default;
 //** Link hover decoration.
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 
 //== Typography
@@ -49,7 +64,7 @@ $link-hover-decoration: underline !default;
 $font-family-sans-serif:  "Orbitron", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       "Playfair Display", Times, serif !default;
 $font-family-display:     "Cookie";
-$font-family-body:	      "Open Sans", helvetica;
+$font-family-body:	      "Roboto Slab", "Open Sans", helvetica;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
@@ -77,7 +92,7 @@ $headings-line-height:    1.1 !default;
 $headings-color:          #363636 !default;
 
 // Nav and footer weight
-$nav-footer-link-weight: 600;
+$nav-footer-link-weight: 400;
 
 //== Iconography
 //
@@ -396,7 +411,7 @@ $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-icon-bar-bg:        #fff !default;
 $navbar-default-toggle-border-color:       #ddd !default;
 
 
@@ -431,7 +446,7 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding:                          10px 15px !default;
+$nav-link-padding:                          10px 12px !default;
 $nav-link-hover-bg:                         transparent !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
@@ -508,20 +523,20 @@ $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
+$state-success-text:             $brand-yellow-dark !default;
+$state-success-bg:               $brand-yellow-light !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
+$state-info-text:                $brand-blue-dark !default;
+$state-info-bg:                  $brand-blue-very-light!default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
+$state-warning-text:             $brand-red !default;
+$state-warning-bg:               $brand-red-very-light !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
+$state-danger-text:              $brand-red-dark !default;
+$state-danger-bg:                $brand-red-med-light !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
