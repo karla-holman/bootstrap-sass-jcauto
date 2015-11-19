@@ -29,6 +29,18 @@ body {
   // background-attachment: fixed;
   background-position: center;
 }
+.header-img#other {
+  width: 100%;
+
+  margin-top: 0;
+
+  background-image: url("Header Image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment: fixed;
+  background-position: top;
+  max-height: 250px;
+}
 
 // Center logo image
 #header-logo {
@@ -115,7 +127,7 @@ a#brand {
 
 // Primary navigation always affixed to top
 #nav.affix {
-  top: 50px;
+  top: 0px;
 }
 
 // Tertiary nav (page sections)
@@ -146,11 +158,10 @@ div#tertiaryNav li {
   width: 200px;
 }
 
-
 // Tertiary nav (page sections)
 #tertiaryNav.affix {
   position: fixed;
-  top: 100px;
+  top: 50px;
   width: 100%;
   z-index: 100;
   // box-shadow: 0 4px 10px #000;
@@ -180,6 +191,7 @@ div#secondNav .row {
   background-image: url("backgrounds/header-pattern.png");
   background-repeat: repeat-x;
   height: 50px;
+  display: none;
 }
 div#secondNav.affix .row {
   margin: 0px;
@@ -402,7 +414,14 @@ p.caption {
 }
 
 #the_parts {
-  background-image: url("The Parts.jpg");
+  background-image: url("The-Parts-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+#the_parts_2 {
+  background-image: url("The-Parts-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -449,6 +468,9 @@ ul.mopar-list {
   list-style-image: url('bullet-point.png');
 }
 
+ul.list-group {
+  list-style-type: none;
+}
 // Responsive Image Gallery
 // --------------------------------------------------
 
