@@ -37,7 +37,7 @@ body {
   background-image: url("Header Image.png");
   background-repeat: no-repeat;
   background-size: cover;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-position: top;
   max-height: 250px;
 }
@@ -471,6 +471,20 @@ ul.mopar-list {
 ul.list-group {
   list-style-type: none;
 }
+
+// Taxon sidebar
+#sidebar {
+  //border-right: 1px solid $brand-blue;
+  padding-right: 20px;
+  margin-top: 20px;
+  height: 100%;
+  //background-color: $brand-blue-very-light;
+}
+#sidebar + #content {
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+}
 // Responsive Image Gallery
 // --------------------------------------------------
 
@@ -558,6 +572,10 @@ ul.list-group {
     margin-top: 1px;
   }
 
+  .header-img#other {
+    max-height: 200px;
+  }
+
   #main-nav-bar a, #tertiaryNav a {
     font-size: 0.9em;
   }
@@ -591,6 +609,10 @@ ul.list-group {
   }
   .affix #header-logo-affix {
     display:none;
+  }
+
+  .header-img#other {
+    max-height: 100px;
   }
 
   #main-nav-bar a, #tertiaryNav a {
@@ -807,6 +829,10 @@ ul.list-group {
     background-size: cover;
     // background-attachment: fixed;
     background-position: center;
+  }
+  .header-img#other {
+    // width: 100%;
+    display: none;
   }
 
   #about-overlay{
