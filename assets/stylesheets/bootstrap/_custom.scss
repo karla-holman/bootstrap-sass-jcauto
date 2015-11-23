@@ -112,7 +112,7 @@ a#brand {
 
 // Primary navigation always affixed to top
 #nav {
-  position: fixed;
+  position: absolute;
   top: 100px;
   width: 100%;
   z-index: 100;
@@ -127,6 +127,7 @@ a#brand {
 
 // Primary navigation always affixed to top
 #nav.affix {
+  position: fixed;
   top: 0px;
 }
 
@@ -177,9 +178,10 @@ div#secondNav .row {
 }
 
 #secondNav{
+  display: inline;
   height: 100px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0px;
   width: 100%;
@@ -188,6 +190,7 @@ div#secondNav .row {
 
 // Secondary (checkered) navigation affixed to top
 #secondNav.affix {
+  position: fixed;
   background-image: url("backgrounds/header-pattern.png");
   background-repeat: repeat-x;
   height: 50px;
