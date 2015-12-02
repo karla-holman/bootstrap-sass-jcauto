@@ -110,6 +110,10 @@ a#brand {
   text-align: right;
 }
 
+#nav-admin {
+  background-color: $brand-red;
+}
+
 // Primary navigation always affixed to top
 #nav {
   position: absolute;
