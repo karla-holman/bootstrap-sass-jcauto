@@ -33,13 +33,13 @@ body {
   width: 100%;
 
   margin-top: 0;
-
-  background-image: url("Header Image.png");
+  background-image: url("Header Image Light.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: 100% auto;
   background-position: top;
+  background-attachment: fixed;
   max-height: 250px;
+  background-color: #fff;
 }
 
 // Center logo image
@@ -429,6 +429,13 @@ p.caption {
 }
 #the_parts_2 {
   background-image: url("The-Parts-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+#the_inventory {
+  background-image: url("The-Inventory.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -938,6 +945,11 @@ ul.list-group {
   .image-background {
     display:none;
   }
+
+ .image-background#the_inventory {
+    display: inline;
+    background-color: #333;
+ }
 
   // Gallery information
   #info {
