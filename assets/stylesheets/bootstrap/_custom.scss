@@ -679,9 +679,14 @@ ul.list-group {
     text-align: center;
   }
 
+  .mobile-left {
+    text-align: left;
+  }
+
   h1 {
     font-size: $font-size-h1 * 0.8;
   }
+
   // HEADER------------------------------------------
   div#tertiaryNav {
     height: auto !important;
