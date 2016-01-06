@@ -348,6 +348,10 @@ footer {
   width: 200px;
 }
 
+[class*='col-'][class*='-2'] .button-link:hover{
+  color: $brand-blue;
+}
+
 a.button-link:hover {
   text-decoration: none;
   color: $brand-blue;
