@@ -511,6 +511,14 @@ ul.mopar-list {
   list-style-image: url('bullet-point.png');
 }
 
+.mopar-list li a {
+  color: $brand-red;
+}
+
+.mopar-list li a:hover {
+  color: $brand-blue;
+}
+
 ul.list-group {
   list-style-type: none;
 }
