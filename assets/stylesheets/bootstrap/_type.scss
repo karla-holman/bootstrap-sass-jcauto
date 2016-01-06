@@ -105,7 +105,7 @@ mark,
   color: $text-muted;
 }
 
-@include text-emphasis-variant('.text-primary', $brand-primary);
+@include text-emphasis-variant('.text-primary', $brand-blue);
 
 @include text-emphasis-variant('.text-success', $state-success-text);
 
