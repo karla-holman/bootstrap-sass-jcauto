@@ -134,7 +134,7 @@ $border-radius-large:       0px; //6px !default;
 $border-radius-small:       0px; //3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #fff !default;
+$component-active-color:    $brand-blue !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 

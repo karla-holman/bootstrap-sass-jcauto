@@ -328,37 +328,43 @@ footer {
 
 .btn-text {
   background-color: transparent;
-  color: $brand-red;
+  color: $brand-blue;
   font-size: $font-size-large;
   height: 50px;
   width: 200px;
 } 
 
-.button-link {
+.btn-text:hover {
   color: $brand-red;
+} 
+
+.button-link {
+  color: $brand-blue;
   font-size: $font-size-large;
+  font-weight: 600;
   height: 50px;
   width: 200px;
 }
 
 [class*='col-'][class*='-2'] .button-link{
-  color: $brand-red;
+  color: $brand-blue;
   font-size: $font-size-base;
+  font-weight: 600;
   height: 50px;
   width: 200px;
 }
 
 [class*='col-'][class*='-2'] .button-link:hover{
-  color: $brand-blue;
+  color: $brand-red;
 }
 
 a.button-link:hover {
   text-decoration: none;
-  color: $brand-blue;
+  color: $brand-red;
 }
 
 a.button-link:hover img {
-  opacity: 0.8;
+  // opacity: 0.8;
 }
 
 // Typography
@@ -398,12 +404,16 @@ h5 {
   min-height: 80px;
 }
 
-p a {
+a {
+  color: $brand-blue;
+}
+
+a:hover {
   color: $brand-red;
 }
 
-p a:hover {
-  color: $brand-blue;
+a.info {
+  color: $brand-red;
 }
 
 p.intro {
@@ -516,11 +526,11 @@ ul.mopar-list {
 }
 
 .mopar-list li a {
-  color: $brand-red;
+  color: $brand-blue;
 }
 
 .mopar-list li a:hover {
-  color: $brand-blue;
+  color: $brand-red;
 }
 
 ul.list-group {
@@ -590,6 +600,23 @@ ul.list-group {
   text-align: left;
 }
 
+// Part tiles
+.part-tiles {
+  background-color: $brand-blue;
+  margin: 0;
+  color: #fff;
+  border: 1px solid $brand-blue-dark;
+  -webkit-transition: background-color 1s; /* Safari */
+  transition: background-color 1s;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.part-tiles:hover {
+  background-color: $brand-blue-light;
+  -webkit-transition: background-color 1s; /* Safari */
+  transition: background-color 1s;
+}
 // media queries
 // --------------------------------------------------
 
