@@ -442,7 +442,8 @@ div#click-text{
 // --------------------------------------------------
 
 .image-background {
-  width: 100%;
+  min-width: 100%;
+  wigth: 100vw;
   max-height: 400px;
 }
 
@@ -944,7 +945,7 @@ ul.list-group {
   #about-overlay{
     display: inline;
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: 0;
     right: 0;
     bottom: 0;
