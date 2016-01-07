@@ -145,10 +145,10 @@ div#tertiaryNav {
 
 div#tertiaryNav li a {
   font-size: $font-size-base;
-  color: #A4A6A9;
+  color: #363636;
 }
 div#tertiaryNav li a:hover {
-  color: $brand-primary;
+  color: $brand-blue;
 }
 
 div#tertiaryNav ul {
@@ -545,6 +545,13 @@ ul.list-group {
   height: 100%;
   //background-color: $brand-blue-very-light;
 }
+.mobile-collapse{
+  display: none;
+}
+.desktop-collapse{
+  display: inline-block;
+  width: 100%;
+}
 // Responsive Image Gallery
 // --------------------------------------------------
 
@@ -781,7 +788,7 @@ ul.list-group {
   // Collapsed menu
   #main-nav-bar {
     color: #363636;
-    background-color: #666bab;
+    background-color: $brand-blue-med-light;
     // border: #A4A6A9 solid 1px;
     width: 100%;
     padding: 0;
@@ -806,13 +813,15 @@ ul.list-group {
     padding: 20px;
     width: 100%;
     text-align: left;
-    background-color: #999cc7;
+    background-color: $brand-blue;
+    transition: all 1s;
+    text-decoration: none;
    }
 
   #main-nav-bar a:hover {
-    background-color:$brand-blue;
+    background-color: $brand-blue-very-light;
     color: #fff;
-    transition: all 0.25s ease-in-out 0s;
+    transition: all 1s;
     text-decoration: none;
    }
 
@@ -1043,5 +1052,14 @@ ul.list-group {
   // FOOTER -------------------------------
   footer {
     text-align: left;
+  }
+
+  // Mobile
+  .mobile-collapse{
+    display: inline-block;
+    width: 100%;
+  }
+  .desktop-collapse{
+    display: none;
   }
 }
