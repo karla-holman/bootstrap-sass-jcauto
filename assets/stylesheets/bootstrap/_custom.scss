@@ -755,6 +755,8 @@ ul.list-group {
   
   body {
     text-align: center;
+    max-width: $screen-sm-min;
+    overflow-x:hidden;
   }
 
   .mobile-left {
