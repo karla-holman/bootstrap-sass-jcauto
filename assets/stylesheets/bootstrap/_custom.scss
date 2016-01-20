@@ -561,6 +561,11 @@ ul.list-group {
   display: inline-block;
   //width: 100%;
 }
+
+.desktop-float-left {
+  float: left;
+  margin-right: 20px;
+}
 // Responsive Image Gallery
 // --------------------------------------------------
 
@@ -787,6 +792,10 @@ ul.list-group {
 
   .mobile-center {
     text-align: center;
+  }
+
+  .mobile-float-center {
+    float: center;
   }
 
   h1 {
