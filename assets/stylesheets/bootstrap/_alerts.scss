@@ -19,6 +19,13 @@
     color: inherit;
   }
 
+  // Headings for larger alerts
+  h5 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+
   // Provide class for links that match alerts
   .alert-link {
     font-weight: $alert-link-font-weight;
@@ -28,6 +35,7 @@
   > p,
   > ul {
     margin-bottom: 0;
+    color: inherit;
   }
 
   > p + p {

@@ -443,6 +443,10 @@ div#click-text{
   text-align: center
 }
 
+h3.product-section-title {
+  margin-bottom: 10px;
+}
+
 // image Sections
 // --------------------------------------------------
 
@@ -555,7 +559,7 @@ ul.list-group {
 }
 .desktop-collapse{
   display: inline-block;
-  width: 100%;
+  //width: 100%;
 }
 // Responsive Image Gallery
 // --------------------------------------------------
@@ -630,6 +634,15 @@ ul.list-group {
   -webkit-transition: background-color 1s; /* Safari */
   transition: background-color 1s;
 }
+
+// from email 
+.email_to_friend a {
+  width: 148.709px;
+}
+.email_to_friend {
+  text-align: left;
+}
+
 // media queries
 // --------------------------------------------------
 
@@ -825,7 +838,7 @@ ul.list-group {
     padding: 20px;
     width: 100%;
     text-align: left;
-    background-color: $brand-blue;
+    background-color: $brand-blue-dark;
     transition: all 1s;
     text-decoration: none;
    }
@@ -866,7 +879,7 @@ ul.list-group {
   }
   #collapseAccount a {
     display: inline;
-    background-color: #666bab;
+    background-color: $brand-blue-med-light;
   }
   #collapseAccount li:first-child a {
     border-top: 1px solid #fff;
@@ -912,13 +925,13 @@ ul.list-group {
 
   // Display search on collapsed menu
   #collapseSearch {
-    display: inline-block;
+    display: inline;
+    text-align: left;
   }
 
   // Fit search inside menu
   #collapseSearch .form-group {
     width: 80%;
-    margin: 0 20px;
     padding-top: 0px;
     float: left;
   }
@@ -927,11 +940,13 @@ ul.list-group {
   }
   // Make search button width of field
   #collapseSearch .btn {
-    width: 8%;
-    float: left;
+    // width: 8%;
+    // float: left;
   }
   #collapseSearch .navbar-form {
     border: none;
+    margin: 0px;
+    box-shadow: none;
   }
 
   // Adjust car image for mobile
