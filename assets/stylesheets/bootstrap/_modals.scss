@@ -9,7 +9,8 @@
 
 // Kill the scroll on the body
 .modal-open {
-  overflow-y: scroll;
+  overflow: hidden;
+  margin-right: 0 !important;
 }
 
 // Container that the modal scrolls within
@@ -21,6 +22,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 0 !important;
   z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
 
@@ -37,7 +39,7 @@
 }
 .modal-open .modal {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 // Shell div to position the modal with bottom padding
