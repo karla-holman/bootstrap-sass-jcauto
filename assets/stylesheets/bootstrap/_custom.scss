@@ -1020,6 +1020,8 @@ ul.list-group {
     //height: 60vh;
     padding: 0;
     display: block;
+    margin-left:  ceil(($gutter / -2));
+    margin-right: floor(($gutter / -2));
   }
   .gallery-arrow-left img{
     left: 10%;
