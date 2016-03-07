@@ -101,8 +101,14 @@ body {
 
 // Logo on sm screen
 a#brand {
-  font-family: 'Orbitron';
+  font-family: 'Roboto Slab';
   text-transform: none;
+  font-weight: 700;
+  color: $brand-yellow;
+}
+
+a#brand:hover {
+  color: $brand-blue;
 }
 
 #top-nav-bar {
@@ -721,13 +727,21 @@ ul.list-group {
   #sm-logo {
     display: inline;
     font-size: 1.2em;
-    font-family: "Orbitron";
+    font-family: "Roboto Slab";
     padding: 10px 0;
     text-transform: none;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  #sm-logo a {
+    text-decoration: none;
+    color: #363636;
   }
 
   #sm-logo a:hover {
     text-decoration: none;
+    color: #bf210a;
   }
 
   #secondNav{
@@ -905,14 +919,14 @@ ul.list-group {
   #primaryToggleButton {
     background-color: none;
     padding: 0 5px;
-    color: $brand-primary;
+    color: #fff;
     border: none;
   }
     // Toggle Menu
   button#primaryToggleButton:focus, button#primaryToggleButton:hover {
     background-color: none !important;
     padding: 0 5px;
-    color: $brand-primary;
+    color: $brand-blue;
     border: none;
   }
 
