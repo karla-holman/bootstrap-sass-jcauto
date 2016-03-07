@@ -93,7 +93,7 @@ body {
 // Center logo text link
 .affix #header-logo-affix a {
   font-size: 1.5em;
-  font-family: 'Orbitron';
+  font-family: 'Roboto Slab';
   text-decoration: none;
   text-transform: none;
   letter-spacing: 0px;
@@ -652,12 +652,12 @@ ul.list-group {
 @media (min-width: $screen-lg-min) {
 
   .affix #header-logo-affix a {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
   // Center logo image
   .affix #header-logo-affix {
     width: 225px;
-    margin-top: -3px;
+    margin-top: 0px;
   }
 }
 
